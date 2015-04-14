@@ -19,3 +19,5 @@ This service response to GET /ping and will respond with
 }
 ```
 
+You can also view Swagger documentation for this webservice via http://localhost:9023/developers which will show you the service documentation.
+
