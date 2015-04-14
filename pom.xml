@@ -9,9 +9,9 @@
 		<module>webservice</module>
 	</modules>
 	<scm>
-		<connection>scm:git:git@github.com:hmsonline/demo.git</connection>
-		<developerConnection>scm:git:git@github.com:hmsonline/demo.git</developerConnection>
-		<url>scm:git@github.com:hmsonline/demo.git</url>
+		<connection>scm:git:git@github.com:DeanPoulin/dropwizard-demo.git</connection>
+		<developerConnection>scm:git:git@github.com:DeanPoulin/dropwizard-demo.git</developerConnection>
+		<url>scm:git@github.com:DeanPoulin/dropwizard-demo.git</url>
 	</scm>
 	<properties>
 		<spring.version>3.2.2.RELEASE</spring.version>
