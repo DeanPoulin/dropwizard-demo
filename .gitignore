@@ -1,0 +1,10 @@
+.classpath
+.project
+.settings
+target
+core/bin
+webservice/bin
+pom.xml.versionsBackup
+*.idea
+*.iml
+

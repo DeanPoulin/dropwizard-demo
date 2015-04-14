@@ -1,0 +1,19 @@
+#!/bin/sh
+
+cwd=`dirname $0`
+
+# Use JAVA_HOME if set, otherwise look for java in PATH
+if [ -x $JAVA_HOME/bin/java ]; then
+    JAVA=$JAVA_HOME/bin/java
+else
+    JAVA=`which java`
+fi
+# general jars.
+for jar in $cwd/../lib/*.jar; do
+CLASSPATH=$CLASSPATH:$jar
+done
+
+JAVA_OPTS=
+
+$JAVA ${JAVA_OPTS} -cp $CLASSPATH com.hmsonline.dropwizard.spring.SpringSwaggerService server conf/config.yaml
+

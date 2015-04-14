@@ -1,0 +1,79 @@
+apiMetadata:
+
+    rootServerName: localhost
+    
+    title: Demo Web Service
+    
+    description: Demo Dropwizard service
+
+spring:
+    appContextType: web
+
+    configLocationsType: classpath
+    
+    configLocations:
+       - conf/beans.xml
+       
+    resources:
+      - pingResource
+      - apiListingResourceJSON   # swagger dependency
+
+    disabledJerseyFeatures:
+       - com.sun.jersey.config.feature.DisableWADL
+
+    jerseyProviders:
+      - resourceListingProvider # swagger dependency
+      - apiDeclarationProvider  # swagger dependency
+      
+http:
+
+  # The port on which the HTTP server listens for service requests.
+  port: 9023
+
+  # The port on which the HTTP server listens for administrative requests.
+  adminPort: 9024
+
+  # The maximum amount of time a connection is allowed to be idle before being closed.
+  maxIdleTime: 60s
+
+# Logging settings.
+logging:
+
+  # The default level of all loggers. Can be OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+
+  # Logger-specific levels.
+  #loggers:
+
+    # Sets the level for 'com.example.app' to DEBUG.
+
+  # Settings for logging to stdout.
+  console:
+
+    # If true, write log statements to stdout.
+    enabled: true
+
+    # TimeZone ID as recognized by Java
+    timeZone: EST5EDT
+
+    # Do not display log statements below this threshold to stdout.
+    threshold: ALL
+
+  # Settings for logging to a file.
+  file:
+
+    # If true, write log statements to a file.
+    enabled: true
+
+    # TimeZone ID as recognized by Java
+    timeZone: EST5EDT
+
+    # Do not write log statements below this threshold to the file.
+    threshold: ALL
+
+    # The file to which statements will be logged. When the log file reaches the maximum size, the
+    # file will be renamed example.log.1, example.log will be truncated, and new statements written
+    # to it.
+    currentLogFilename: /var/log/demo/demo.log
+
+    archivedLogFilenamePattern: /var/log/demo/demo-%d.log.gz
