@@ -10,7 +10,4 @@
     <context:component-scan base-package="com.acme.demo"/>
     <context:property-placeholder location="file:conf/env.properties"/>
 
-	<bean id="apiListingResourceJSON" class="com.wordnik.swagger.jaxrs.listing.ApiListingResourceJSON" />
-	<bean id="resourceListingProvider" class="com.wordnik.swagger.jaxrs.listing.ResourceListingProvider" />
-	<bean id="apiDeclarationProvider" class="com.wordnik.swagger.jaxrs.listing.ApiDeclarationProvider" />
 </beans>
