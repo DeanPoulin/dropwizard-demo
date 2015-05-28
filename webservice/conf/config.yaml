@@ -16,15 +16,10 @@ spring:
        
     resources:
       - pingResource
-      - apiListingResourceJSON   # swagger dependency
 
     disabledJerseyFeatures:
        - com.sun.jersey.config.feature.DisableWADL
 
-    jerseyProviders:
-      - resourceListingProvider # swagger dependency
-      - apiDeclarationProvider  # swagger dependency
-      
 http:
 
   # The port on which the HTTP server listens for service requests.
