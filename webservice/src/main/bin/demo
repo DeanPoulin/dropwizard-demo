@@ -15,5 +15,5 @@ done
 
 JAVA_OPTS=
 
-$JAVA ${JAVA_OPTS} -cp $CLASSPATH com.hmsonline.dropwizard.spring.SpringSwaggerService server conf/config.yaml
+$JAVA ${JAVA_OPTS} -cp $CLASSPATH com.hmsonline.dropwizard.spring.SpringService server conf/config.yaml
 
